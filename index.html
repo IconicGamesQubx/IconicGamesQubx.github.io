@@ -1,23 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Qubx</title>
-    <style>
-        .center-image {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qubx - Geometric Puzzle Game</title>
+  <meta name="description" content="Qubx - A fast-reaction 3D puzzle game with neon aesthetics. Play the classic version free or try the new Steam release!">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <img src="qubx.png" alt="Qubx Title" class="center-image">
-    <p>A game of three dimensional shape matching, Qubx's easy and intuitive controls make it simple to pick up and play, but hard to master. Manipulate a cube to match incoming shapes to the beat of three different tracks and the ever increasing speed of the shapes. Match multiple shapes simultaneously to score bonuses that can make the difference between being at the top of the table and not even placing.</p>
-    <p>I no longer have the original  source code for this game so am unable to offer improved resolutions</p>
-    <p>Please note that the online high-score servers no longer exist</p>
-    <p><a href="QubxFull.zip">Download the Full game</a> freely available for anyone that wishes to play</p>
-    <p><a href="QubxOST.zip">Download the OST</a> if you want the music stylings of Dr_Gonzo.404</p>
+  <div class="bg-wrapper">
+    <div class="grid-bg"></div>
+    <div class="glow-orb glow-orb-1" id="orb1"></div>
+    <div class="glow-orb glow-orb-2" id="orb2"></div>
+    
+    <div class="container">
+      <header>
+        <div class="title-wrapper">
+          <h1>QUBX</h1>
+          <div class="scanlines"></div>
+        </div>
+        <p class="subtitle">GEOMETRIC PUZZLE • NEON AESTHETICS • PURE REFLEX</p>
+      </header>
+
+      <div class="cards-grid">
+        <!-- Qubx 2 Card -->
+        <div class="card card-new">
+          <div class="card-glow"></div>
+          <div class="card-content">
+            <div class="card-header">
+              <div class="status-dot"></div>
+              <h2 class="card-title">QUBX 2</h2>
+              <span class="badge-new">NEW</span>
+            </div>
+            
+            <p class="card-description">
+              The evolution. Neon-soaked vaporwave aesthetics meet explosive particle effects 
+              in this high-intensity remake with global leaderboards.
+            </p>
+            
+            <div class="tags">
+              <span class="tag">STEAM EXCLUSIVE</span>
+              <span class="tag">STEAM DECK</span>
+              <span class="tag">CYBERPUNK</span>
+            </div>
+            
+            <div class="features-list">
+              <p>• Vaporwave visual overhaul</p>
+              <p>• Steam achievements & global leaderboards</p>
+              <p>• Enhanced combo system & progression</p>
+            </div>
+            
+            <div class="buttons">
+              <a href="https://store.steampowered.com/app/3856500/Qubx_2/" target="_blank" rel="noopener noreferrer" class="btn btn-steam">► PLAY ON STEAM</a>
+              <a href="https://store.steampowered.com/app/3856500/Qubx_2/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">♡ ADD TO WISHLIST</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Classic Card -->
+        <div class="card card-classic">
+          <div class="card-glow"></div>
+          <div class="card-content">
+            <div class="card-header">
+              <div class="status-dot"></div>
+              <h2 class="card-title">CLASSIC</h2>
+            </div>
+            
+            <p class="card-description">
+              The original experience. A 3D shape-matching game with intuitive controls 
+              and addictive gameplay that started it all.
+            </p>
+            
+            <div class="tags">
+              <span class="tag">LEGACY EDITION</span>
+              <span class="tag">RETRO VIBES</span>
+              <span class="tag">FREE FOREVER</span>
+            </div>
+            
+            <div class="features-list">
+              <p>• Three dimensional shape matching</p>
+              <p>• Original 3-track soundtrack by DrGonzo_404</p>
+              <p>• Classic gameplay mechanics</p>
+            </div>
+            
+            <div class="buttons">
+              <a href="QubxFull.zip" class="btn btn-primary">↓ DOWNLOAD GAME</a>
+              <a href="QubxOST.zip" class="btn btn-secondary">♪ DOWNLOAD OST</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Features Section -->
+      <div class="features">
+        <h3 class="features-title">THE QUBX EXPERIENCE</h3>
+        
+        <div class="features-grid">
+          <div class="feature-1">
+            <div class="feature-icon">🎯</div>
+            <h4 class="feature-title">PRECISION GAMEPLAY</h4>
+            <p class="feature-description">
+              Rotate a 3D cube to match incoming shapes with split-second timing
+            </p>
+          </div>
+          
+          <div class="feature-2">
+            <div class="feature-icon">⚡</div>
+            <h4 class="feature-title">COMBO MULTIPLIERS</h4>
+            <p class="feature-description">
+              Chain successful matches to build massive score multipliers
+            </p>
+          </div>
+          
+          <div class="feature-3">
+            <div class="feature-icon">🎵</div>
+            <h4 class="feature-title">PULSE-POUNDING MUSIC</h4>
+            <p class="feature-description">
+              Original neofunk soundtrack synced to gameplay intensity
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <p>
+          Created by Iconic Games • 
+          <a href="https://iconicgames.com">iconicgames.com</a>
+        </p>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    // Mouse-following glow orbs
+    const orb1 = document.getElementById('orb1');
+    const orb2 = document.getElementById('orb2');
+    
+    document.addEventListener('mousemove', (e) => {
+      const x = (e.clientX / window.innerWidth) * 100;
+      const y = (e.clientY / window.innerHeight) * 100;
+      
+      orb1.style.left = x + '%';
+      orb1.style.top = y + '%';
+      
+      orb2.style.left = (100 - x) + '%';
+      orb2.style.top = (100 - y) + '%';
+    });
+  </script>
 </body>
 </html>
