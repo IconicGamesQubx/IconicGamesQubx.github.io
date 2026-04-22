@@ -1,0 +1,400 @@
+/* Skunkworks — blueprint / drafting aesthetic.
+   Scoped to skunkworks.html; Qubx page keeps styles.css untouched. */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --ink: #c8e4ff;
+  --ink-bright: #e8f4ff;
+  --ink-dim: rgba(200, 228, 255, 0.55);
+  --ink-faint: rgba(200, 228, 255, 0.25);
+  --paper: #0a1e3a;
+  --paper-deep: #061428;
+  --accent: #ffd866;
+  --red: #ff6b6b;
+}
+
+body {
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--ink);
+  background: var(--paper-deep);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  padding: 2rem 1rem 4rem;
+}
+
+/* Graph paper — major + minor grid */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(rgba(200, 228, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(200, 228, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(rgba(200, 228, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(200, 228, 255, 0.04) 1px, transparent 1px);
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  z-index: -1;
+}
+
+/* Vignette */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 40%, rgba(6, 20, 40, 0.7) 100%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Minimal top nav */
+.sw-nav {
+  font-size: 0.75rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.2em;
+  color: var(--ink-dim);
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.sw-nav a {
+  color: var(--ink-dim);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.sw-nav a:hover {
+  color: var(--ink-bright);
+  border-bottom-color: var(--ink-bright);
+}
+
+.sw-nav .active {
+  color: var(--ink-bright);
+  border-bottom: 1px solid var(--ink-bright);
+  padding-bottom: 2px;
+}
+
+.sw-nav .sep { color: var(--ink-faint); }
+
+/* Drafting title block */
+.titleblock {
+  border: 2px solid var(--ink);
+  padding: 1rem 1.5rem;
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  background: rgba(10, 30, 58, 0.6);
+}
+
+.titleblock h1 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  font-size: 1.8rem;
+  letter-spacing: 0.15em;
+}
+
+.titleblock .subtitle {
+  font-size: 0.75rem;
+  color: var(--ink-dim);
+  margin-top: 0.3rem;
+  letter-spacing: 0.15em;
+}
+
+.titleblock .meta {
+  text-align: right;
+  font-size: 0.7rem;
+  line-height: 1.5;
+  color: var(--ink-dim);
+  letter-spacing: 0.1em;
+}
+
+.intro {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: var(--ink-dim);
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+}
+
+.handwritten {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 1.2rem;
+  color: var(--accent);
+  transform: rotate(-1deg);
+  display: inline-block;
+}
+
+/* Project card */
+.project {
+  border: 1px solid var(--ink);
+  padding: 2rem;
+  background: rgba(10, 30, 58, 0.4);
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.project::before {
+  content: 'DWG-001';
+  position: absolute;
+  top: -0.6rem;
+  left: 1.5rem;
+  background: var(--paper-deep);
+  padding: 0 0.75rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: var(--ink-dim);
+}
+
+.project-log::before {
+  content: 'LOG-001';
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px dashed var(--ink-faint);
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.project-subtitle {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 1.3rem;
+  color: var(--accent);
+  margin-top: 0.3rem;
+}
+
+.status-tag {
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.stamp {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  border: 2px solid var(--red);
+  color: var(--red);
+  padding: 0.3rem 0.8rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  transform: rotate(4deg);
+  opacity: 0.8;
+  font-weight: 600;
+}
+
+.stamp-log {
+  border-color: var(--accent);
+  color: var(--accent);
+  opacity: 0.75;
+}
+
+.blurb {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--ink);
+  margin-bottom: 1.5rem;
+}
+
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  font-size: 0.78rem;
+}
+
+.spec-table td {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--ink-faint);
+}
+
+.spec-table td:first-child {
+  color: var(--ink-dim);
+  letter-spacing: 0.15em;
+  width: 140px;
+  background: rgba(200, 228, 255, 0.04);
+}
+
+.annotations {
+  margin: 1.5rem 0;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 1.1rem;
+  color: var(--accent);
+  line-height: 1.6;
+}
+
+.annotations p {
+  position: relative;
+  padding-left: 1.5rem;
+  transform: rotate(-0.5deg);
+  margin-bottom: 0.4rem;
+}
+
+.annotations p::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+}
+
+/* Devlog */
+.log {
+  list-style: none;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.log-entry {
+  display: grid;
+  grid-template-columns: 110px 90px 1fr;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px dashed var(--ink-faint);
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.log-entry:last-child {
+  border-bottom: none;
+}
+
+.log-date {
+  color: var(--ink-dim);
+  letter-spacing: 0.1em;
+  font-size: 0.75rem;
+  padding-top: 2px;
+}
+
+.log-ver {
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  font-size: 0.85rem;
+  padding-top: 2px;
+}
+
+.log-msg strong {
+  color: var(--ink-bright);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.3rem;
+  letter-spacing: 0.02em;
+}
+
+.log-msg {
+  color: var(--ink);
+}
+
+.log-note {
+  display: block;
+  margin-top: 0.3rem;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 1rem;
+  color: var(--accent);
+  line-height: 1.5;
+  transform: rotate(-0.3deg);
+  transform-origin: left;
+}
+
+.log-note em {
+  font-style: normal;
+  color: var(--ink-bright);
+}
+
+.log-footer {
+  font-size: 0.75rem;
+  color: var(--ink-dim);
+  line-height: 1.7;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--ink-faint);
+}
+
+.log-footer em {
+  font-family: 'Shadows Into Light', cursive;
+  font-style: normal;
+  color: var(--accent);
+  font-size: 0.95rem;
+}
+
+/* Buttons */
+.btn-row {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px dashed var(--ink-faint);
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  background: transparent;
+  font-family: 'IBM Plex Mono', monospace;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  background: var(--ink);
+  color: var(--paper-deep);
+}
+
+.btn-primary {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.btn-primary:hover {
+  background: var(--accent);
+  color: var(--paper-deep);
+}
+
+.footer {
+  margin-top: 3rem;
+  font-size: 0.7rem;
+  color: var(--ink-faint);
+  letter-spacing: 0.15em;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .titleblock {
+    grid-template-columns: 1fr;
+  }
+  .titleblock .meta { text-align: left; }
+  .project-header { flex-direction: column; align-items: flex-start; gap: 0.8rem; }
+  .log-entry {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+  }
+  .log-date, .log-ver { padding-top: 0; }
+  .stamp { top: 0.7rem; right: 0.7rem; font-size: 0.6rem; }
+}
