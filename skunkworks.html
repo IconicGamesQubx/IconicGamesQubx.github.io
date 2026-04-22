@@ -45,7 +45,7 @@
           <div class="project-title">ROCK DWELLERS</div>
           <div class="project-subtitle">— working title —</div>
         </div>
-        <div class="status-tag">v0.1 · BUILD OK</div>
+        <div class="status-tag">v0.2 · BUILD OK</div>
       </header>
 
       <p class="blurb">
@@ -58,17 +58,18 @@
         <tr><td>GENRE</td><td>Stealth-survival, top-down, real-time</td></tr>
         <tr><td>PLATFORM</td><td>Windows x64, self-contained</td></tr>
         <tr><td>ENGINE</td><td>Godot</td></tr>
-        <tr><td>STATUS</td><td>Core loop playable — saturation &amp; depletion next</td></tr>
+        <tr><td>STATUS</td><td>Saturation online — depletion &amp; trails next</td></tr>
       </table>
 
       <div class="annotations">
         <p>detection = instant game over (for now)</p>
-        <p>asteroids are infinite (for now)</p>
-        <p>trails, shadows, jump gate — all planned, none built</p>
+        <p>asteroids have slot limits; extras queue in orbit</p>
+        <p>loaded ships fly slower — loaded = visible longer</p>
+        <p>trails, shadows, jump gate — still planned, still unbuilt</p>
       </div>
 
       <div class="btn-row">
-        <a href="https://github.com/IconicGamesQubx/IconicGamesQubx.github.io/releases/download/rockdweller-prototype-v0.1/rockdweller.7z" class="btn btn-primary">↓ DOWNLOAD BUILD</a>
+        <a href="https://github.com/IconicGamesQubx/IconicGamesQubx.github.io/releases/download/rockdweller-prototype-v0.2/rockdweller.7z" class="btn btn-primary">↓ DOWNLOAD BUILD</a>
         <button type="button" class="btn" data-show="rd-devlog">VIEW DEVLOG →</button>
       </div>
     </article>
@@ -82,10 +83,21 @@
           <div class="project-title">ROCK DWELLERS</div>
           <div class="project-subtitle">— build history —</div>
         </div>
-        <div class="status-tag">1 BUILD</div>
+        <div class="status-tag">2 BUILDS</div>
       </header>
 
       <ol class="log">
+        <li class="log-entry">
+          <div class="log-date">2026-04-23</div>
+          <div class="log-ver">v0.2</div>
+          <div class="log-msg">
+            <strong>Saturation + procedural worlds.</strong>
+            Asteroids now have mining slots; excess ships queue in orbit. Loaded
+            ships fly slower than empty ones. Asteroid layout is generated fresh
+            each run; hostile target selection tidied up.
+            <span class="log-note">— "Turtle on one rock" is dead — the queue pushes you to spread. Loaded ships being slower quietly makes geometry matter without a single numerical UI.</span>
+          </div>
+        </li>
         <li class="log-entry">
           <div class="log-date">2026-04-22</div>
           <div class="log-ver">v0.1</div>
