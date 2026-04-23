@@ -45,7 +45,7 @@
           <div class="project-title">ROCK DWELLERS</div>
           <div class="project-subtitle">— working title —</div>
         </div>
-        <div class="status-tag">v0.2 · BUILD OK</div>
+        <div class="status-tag">v0.3 · BUILD OK</div>
       </header>
 
       <p class="blurb">
@@ -58,18 +58,18 @@
         <tr><td>GENRE</td><td>Stealth-survival, top-down, real-time</td></tr>
         <tr><td>PLATFORM</td><td>Windows x64, self-contained</td></tr>
         <tr><td>ENGINE</td><td>Godot</td></tr>
-        <tr><td>STATUS</td><td>Saturation online — depletion &amp; trails next</td></tr>
+        <tr><td>STATUS</td><td>Cluster maps live — trails &amp; depletion next</td></tr>
       </table>
 
       <div class="annotations">
         <p>detection = instant game over (for now)</p>
-        <p>asteroids have slot limits; extras queue in orbit</p>
+        <p>asteroids spawn in connected clusters; slots fill, extras queue</p>
         <p>loaded ships fly slower — loaded = visible longer</p>
         <p>trails, shadows, jump gate — still planned, still unbuilt</p>
       </div>
 
       <div class="btn-row">
-        <a href="https://github.com/IconicGamesQubx/IconicGamesQubx.github.io/releases/download/rockdweller-prototype-v0.2/rockdweller.7z" class="btn btn-primary">↓ DOWNLOAD BUILD</a>
+        <a href="https://github.com/IconicGamesQubx/IconicGamesQubx.github.io/releases/download/rockdweller-prototype-v0.3/rockdweller.exe.7z" class="btn btn-primary">↓ DOWNLOAD BUILD</a>
         <button type="button" class="btn" data-show="rd-devlog">VIEW DEVLOG →</button>
       </div>
     </article>
@@ -83,10 +83,22 @@
           <div class="project-title">ROCK DWELLERS</div>
           <div class="project-subtitle">— build history —</div>
         </div>
-        <div class="status-tag">2 BUILDS</div>
+        <div class="status-tag">3 BUILDS</div>
       </header>
 
       <ol class="log">
+        <li class="log-entry">
+          <div class="log-date">2026-04-23</div>
+          <div class="log-ver">v0.3</div>
+          <div class="log-msg">
+            <strong>Cluster maps + pause menu.</strong>
+            Asteroids now spawn in connected clusters with distinctive oval shapes.
+            Per-asteroid resources halved to push more movement between clusters.
+            Smoother orbit entry and tangent-facing while queued. First QoL feature:
+            pause menu with Continue / Restart / Exit.
+            <span class="log-note">— Clusters give the map character — each region reads differently. Halving resources does some of depletion's job cheaply, a nice preview of where real depletion will hurt.</span>
+          </div>
+        </li>
         <li class="log-entry">
           <div class="log-date">2026-04-23</div>
           <div class="log-ver">v0.2</div>
