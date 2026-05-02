@@ -26,7 +26,7 @@
       </div>
       <div class="meta">
         SHEET 01/01<br>
-        REV: 2026-04<br>
+        REV: 2026-05<br>
         SCALE: 1:1
       </div>
     </div>
@@ -37,7 +37,7 @@
     </p>
 
     <!-- Rock Dwellers — project view -->
-    <article class="project" id="rd-project" data-view="project">
+    <article class="project" id="rd-project" data-dwg="001">
       <div class="stamp">PROTOTYPE</div>
 
       <header class="project-header">
@@ -70,83 +70,49 @@
 
       <div class="btn-row">
         <a href="https://github.com/IconicGamesQubx/IconicGamesQubx.github.io/releases/download/rockdweller-prototype-v0.3/rockdweller.exe.7z" class="btn btn-primary">↓ DOWNLOAD BUILD</a>
-        <button type="button" class="btn" data-show="rd-devlog">VIEW DEVLOG →</button>
+        <a href="skunkworks-rock-dwellers-devlog.html" class="btn">VIEW DEVLOG →</a>
       </div>
     </article>
 
-    <!-- Rock Dwellers — devlog view -->
-    <article class="project project-log" id="rd-devlog" data-view="devlog" hidden>
-      <div class="stamp stamp-log">DEVLOG</div>
+    <!-- Psychogorilla — project view -->
+    <article class="project" id="pg-project" data-dwg="002">
+      <div class="stamp">PROTOTYPE</div>
 
       <header class="project-header">
         <div>
-          <div class="project-title">ROCK DWELLERS</div>
-          <div class="project-subtitle">— build history —</div>
+          <div class="project-title">PSYCHOGORILLA</div>
+          <div class="project-subtitle">— working title —</div>
         </div>
-        <div class="status-tag">3 BUILDS</div>
+        <div class="status-tag">v0.1 · BUILD OK</div>
       </header>
 
-      <ol class="log">
-        <li class="log-entry">
-          <div class="log-date">2026-04-23</div>
-          <div class="log-ver">v0.3</div>
-          <div class="log-msg">
-            <strong>Cluster maps + pause menu.</strong>
-            Asteroids now spawn in connected clusters with distinctive oval shapes.
-            Per-asteroid resources halved to push more movement between clusters.
-            Smoother orbit entry and tangent-facing while queued. First QoL feature:
-            pause menu with Continue / Restart / Exit.
-            <span class="log-note">— Clusters give the map character — each region reads differently. Halving resources does some of depletion's job cheaply, a nice preview of where real depletion will hurt.</span>
-          </div>
-        </li>
-        <li class="log-entry">
-          <div class="log-date">2026-04-23</div>
-          <div class="log-ver">v0.2</div>
-          <div class="log-msg">
-            <strong>Saturation + procedural worlds.</strong>
-            Asteroids now have mining slots; excess ships queue in orbit. Loaded
-            ships fly slower than empty ones. Asteroid layout is generated fresh
-            each run; hostile target selection tidied up.
-            <span class="log-note">— "Turtle on one rock" is dead — the queue pushes you to spread. Loaded ships being slower quietly makes geometry matter without a single numerical UI.</span>
-          </div>
-        </li>
-        <li class="log-entry">
-          <div class="log-date">2026-04-22</div>
-          <div class="log-ver">v0.1</div>
-          <div class="log-msg">
-            <strong>MVP — core loop playable.</strong>
-            Dispatch, mine, return, repeat. One hostile on a weighted-random patrol;
-            detection ends the run. Tested up to 348 ships in flight.
-            <span class="log-note">— The tension is real. Asteroids don't deplete yet, so "turtle on one safe rock" is too viable — that's the next build's job.</span>
-          </div>
-        </li>
-      </ol>
-
-      <p class="log-footer">
-        One entry per playable build. Each entry summarises<br>
-        what's new, what's broken, and what it <em>felt like</em> to play.
+      <p class="blurb">
+        Single-room stealth. You share a prison cell with a gorilla. Finish your chores
+        before the timer runs out — quietly enough that the gorilla doesn't snap.
+        The core tension: get work done vs. don't wake the thing in the corner.
       </p>
 
+      <table class="spec-table">
+        <tr><td>GENRE</td><td>Stealth, single-room, real-time</td></tr>
+        <tr><td>PLATFORM</td><td>Windows x64, self-contained</td></tr>
+        <tr><td>ENGINE</td><td>Godot</td></tr>
+        <tr><td>STATUS</td><td>One-build prototype — may or may not return</td></tr>
+      </table>
+
+      <div class="annotations">
+        <p>movement makes noise. so does work.</p>
+        <p>noisy tasks: 4s. silent tasks: 10s. pick your poison.</p>
+        <p>gorilla state machine: sleeping → pacing → fixated → enraged</p>
+        <p>once enraged, contact = caught</p>
+      </div>
+
       <div class="btn-row">
-        <button type="button" class="btn btn-primary" data-show="rd-project">← BACK TO PROJECT</button>
+        <a href="https://github.com/IconicGamesQubx/IconicGamesQubx.github.io/releases/download/gorila-proto/Psychogorilla.7z" class="btn btn-primary">↓ DOWNLOAD BUILD</a>
+        <a href="skunkworks-psychogorilla-devlog.html" class="btn">VIEW DEVLOG →</a>
       </div>
     </article>
 
     <div class="footer">ICONIC GAMES &middot; INTERNAL &middot; NO DISTRIBUTION</div>
   </div>
-
-  <script>
-    // Toggle between project and devlog views on the same card slot.
-    document.querySelectorAll('[data-show]').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const target = btn.dataset.show;
-        document.querySelectorAll('[data-view]').forEach(card => {
-          card.hidden = card.id !== target;
-        });
-        const shown = document.getElementById(target);
-        window.scrollTo({ top: shown.offsetTop - 40, behavior: 'smooth' });
-      });
-    });
-  </script>
 </body>
 </html>
