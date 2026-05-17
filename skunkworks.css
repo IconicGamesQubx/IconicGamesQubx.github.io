@@ -322,6 +322,40 @@ body::after {
   color: var(--ink-bright);
 }
 
+.log-section {
+  margin-top: 0.55rem;
+}
+
+.log-section > em {
+  display: block;
+  font-style: normal;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+  margin-bottom: 0.2rem;
+}
+
+.log-section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.log-section li {
+  position: relative;
+  padding-left: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.log-section li::before {
+  content: "›";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 600;
+}
+
 .log-footer {
   font-size: 0.75rem;
   color: var(--ink-dim);
