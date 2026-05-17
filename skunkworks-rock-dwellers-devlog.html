@@ -37,30 +37,41 @@
           <div class="log-date">2026-05-10</div>
           <div class="log-ver">v0.5</div>
           <div class="log-msg">
-            <strong>Rich zones, smarter fleet dispatch.</strong>
-            Asteroids now have quality tiers with a rich-zone cluster bias;
-            hostiles spawn and target there too, so the best ground is also
-            the most contested. Fleet dispatch fans across multiple asteroids
-            — mid-launch retargeting and queue-aware launcher tolerance mean
-            clicking a second target actually splits the swarm instead of
-            locking onto the first. Orbit insertion tightened to land ships
-            on the ring rather than drift high; HUD FPS counter added.
-            <span class="log-note">— The rich zone re-creates the v0.2 "queue forces you to spread" tension at the map scale: the best rock is also the loudest, so you stage out from it. Watching a launcher fan out across a 50-ship backlog in seconds finally feels like a fleet, not a conga line.</span>
+            <strong>Rich zones + fleet dispatch.</strong>
+            <div class="log-section"><em>New</em>
+              <ul>
+                <li>Asteroids carry quality tiers with a rich-zone cluster bias; hostiles spawn and target there too, so the best ground is also the loudest.</li>
+                <li>Fleet dispatch fans across targets: mid-launch retarget when you click a second asteroid, plus queue-aware launcher tolerance so a 50-ship backlog clears in seconds instead of trickling.</li>
+              </ul>
+            </div>
+            <div class="log-section"><em>Changes</em>
+              <ul>
+                <li>Orbit insertion tightened to land ships on the ring instead of drifting high.</li>
+              </ul>
+            </div>
+            <span class="log-note">— Watching a launcher fan out across a 50-ship backlog finally feels like a fleet, not a conga line.</span>
           </div>
         </li>
         <li class="log-entry">
           <div class="log-date">2026-04-27</div>
           <div class="log-ver">v0.4</div>
           <div class="log-msg">
-            <strong>Composable spacecraft + smarter hostiles.</strong>
-            Monolithic Ship rewritten as composable Spacecraft + primitive
-            controllers; orbit insertion now runs on rails. Hostiles got
-            smarter — hunt mode with swept-path alerts, a heat-map overlay
-            tracking mining and thrust, and memory of asteroids they've
-            passed. New base systems: buildable gates, per-dock ship
-            assignment, per-launcher cooldowns. Camera pans on WASD/arrows
-            and zooms to the cursor.
-            <span class="log-note">— The rewrite paid for itself the moment two ships flew different arcs to the same asteroid. The heat overlay turns "are they about to spot me?" from a hunch into a read.</span>
+            <strong>Smarter hostiles + base building.</strong>
+            <div class="log-section"><em>New</em>
+              <ul>
+                <li>Hostiles hunt: memory of asteroids they've passed, swept-path alerts, and suppression while laying low.</li>
+                <li>Heat-map overlay tracking mining and thrust; hostiles drift toward heat.</li>
+                <li>Buildable gates, per-dock ship assignment, per-launcher cooldowns.</li>
+                <li>Asteroid hover panel; camera pans on WASD/arrows and zooms to the cursor.</li>
+              </ul>
+            </div>
+            <div class="log-section"><em>Changes</em>
+              <ul>
+                <li>Orbit insertion and landing visibly smoother (cruise-then-flip handover, spiral descent).</li>
+                <li>Base now an octagon; asteroids drawn as rough polygons; concurrent ships take distinct arcs.</li>
+              </ul>
+            </div>
+            <span class="log-note">— The heat overlay turns "are they about to spot me?" from a hunch into a read.</span>
           </div>
         </li>
         <li class="log-entry">
@@ -68,10 +79,18 @@
           <div class="log-ver">v0.3</div>
           <div class="log-msg">
             <strong>Cluster maps + pause menu.</strong>
-            Asteroids now spawn in connected clusters with distinctive oval shapes.
-            Per-asteroid resources halved to push more movement between clusters.
-            Smoother orbit entry and tangent-facing while queued. First QoL feature:
-            pause menu with Continue / Restart / Exit.
+            <div class="log-section"><em>New</em>
+              <ul>
+                <li>Asteroids spawn in connected clusters with distinctive oval shapes per cluster.</li>
+                <li>Pause menu with Continue / Restart / Exit.</li>
+              </ul>
+            </div>
+            <div class="log-section"><em>Changes</em>
+              <ul>
+                <li>Per-asteroid resources halved to push movement between clusters.</li>
+                <li>Orbit entry smoother; ships face along tangent while queued.</li>
+              </ul>
+            </div>
             <span class="log-note">— Clusters give the map character — each region reads differently. Halving resources does some of depletion's job cheaply, a nice preview of where real depletion will hurt.</span>
           </div>
         </li>
@@ -80,9 +99,22 @@
           <div class="log-ver">v0.2</div>
           <div class="log-msg">
             <strong>Saturation + procedural worlds.</strong>
-            Asteroids now have mining slots; excess ships queue in orbit. Loaded
-            ships fly slower than empty ones. Asteroid layout is generated fresh
-            each run; hostile target selection tidied up.
+            <div class="log-section"><em>New</em>
+              <ul>
+                <li>Asteroids have mining slots; excess ships queue in orbit.</li>
+                <li>Asteroid layout regenerates each run.</li>
+              </ul>
+            </div>
+            <div class="log-section"><em>Changes</em>
+              <ul>
+                <li>Loaded ships fly slower than empty ones (mass-scaled physics).</li>
+              </ul>
+            </div>
+            <div class="log-section"><em>Fixes</em>
+              <ul>
+                <li>Hostile target selection cleaned up.</li>
+              </ul>
+            </div>
             <span class="log-note">— "Turtle on one rock" is dead — the queue pushes you to spread. Loaded ships being slower quietly makes geometry matter without a single numerical UI.</span>
           </div>
         </li>
@@ -91,8 +123,12 @@
           <div class="log-ver">v0.1</div>
           <div class="log-msg">
             <strong>MVP — core loop playable.</strong>
-            Dispatch, mine, return, repeat. One hostile on a weighted-random patrol;
-            detection ends the run. Tested up to 348 ships in flight.
+            <div class="log-section"><em>New</em>
+              <ul>
+                <li>Core dispatch/mine/return loop. Tested up to 348 ships in flight.</li>
+                <li>One hostile patrolling on a weighted-random wandering orbit; detection ends the run.</li>
+              </ul>
+            </div>
             <span class="log-note">— The tension is real. Asteroids don't deplete yet, so "turtle on one safe rock" is too viable — that's the next build's job.</span>
           </div>
         </li>
