@@ -3,31 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Iconic Games — Psychogorilla Devlog</title>
-  <meta name="description" content="Psychogorilla — build history. Per-build notes from the Iconic Games skunkworks.">
+  <title>Iconic Games: Psychogorilla Devlog</title>
+  <meta name="description" content="Psychogorilla: build history. Per-build notes from the Iconic Games skunkworks.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;600&family=Shadows+Into+Light&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="skunkworks.css">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <meta name="theme-color" content="#061428">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <div class="container">
-    <nav class="sw-nav">
-      <a href="index.html">◂ QUBX</a>
+    <nav class="sw-nav" aria-label="Main navigation">
+      <a class="sw-brand" href="index.html" aria-label="Iconic Games home"><span class="studio-logo"><img src="assets/iconic-games-logo.png" alt="Iconic Games" width="48" height="48"></span></a>
+      <a href="index.html">QUBX 2</a>
       <span class="sep">/</span>
       <a href="skunkworks.html">SKUNKWORKS</a>
       <span class="sep">/</span>
       <span class="active">PSYCHOGORILLA DEVLOG</span>
     </nav>
 
+    <main id="main">
+
     <article class="project project-log" id="pg-devlog" data-dwg="002">
       <div class="stamp stamp-log">DEVLOG</div>
 
       <header class="project-header">
         <div>
-          <div class="project-title">PSYCHOGORILLA</div>
-          <div class="project-subtitle">— build history —</div>
+          <h1 class="project-title">PSYCHOGORILLA</h1>
+          <div class="project-subtitle">build history</div>
         </div>
         <div class="status-tag">1 BUILD</div>
       </header>
@@ -42,10 +48,10 @@
               <ul>
                 <li>180-second timer; five chores to finish before the buzzer.</li>
                 <li>Heat builds from movement and from noisy tasks; silent tasks are slower but safer.</li>
-                <li>Cellmate escalates through four states — sleeping, pacing, fixated, enraged. Contact while enraged ends the run.</li>
+                <li>Cellmate escalates through four states: sleeping, pacing, fixated, enraged. Contact while enraged ends the run.</li>
               </ul>
             </div>
-            <span class="log-note">— The four-state escalation is the part that's working: you can feel the room get tighter without a single number on screen. Loss copy is still placeholder. May or may not get a v0.2 — that's what skunkworks is for.</span>
+            <span class="log-note">The four-state escalation is the part that's working: you can feel the room get tighter without a single number on screen. Loss copy is still placeholder. May or may not get a v0.2: that's what skunkworks is for.</span>
           </div>
         </li>
       </ol>
@@ -60,7 +66,8 @@
       </div>
     </article>
 
-    <div class="footer">ICONIC GAMES &middot; INTERNAL &middot; NO DISTRIBUTION</div>
+    </main>
+    <footer class="footer"><a href="index.html">ICONIC GAMES</a> &middot; EXPERIMENTAL BUILDS</footer>
   </div>
 </body>
 </html>

@@ -1,0 +1,17 @@
+VCR OSD Mono
+Designer: Riciery Leal
+Source: DaFont.com — https://www.dafont.com/vcr-osd-mono.font
+
+License: Free for personal and commercial use, per the font's DaFont
+distribution page. DaFont-hosted freeware fonts do not ship a bundled
+license text file from the author; this notice records the terms stated
+on the source page at the time this font was added to the project.
+
+This font does not carry a Reserved Font Name and is not SIL OFL licensed
+(unlike Bungee, Pacifico, Noto Sans JP, and Noto Sans SC, which use the
+SIL Open Font License and ship their full OFL text alongside this file).
+
+If redistribution terms on the source page change, or if commercial use
+requires separate clearance from the author, this notice should be
+updated to match — see CREDITS.md at the repository root for the
+project-wide attribution summary.

@@ -1,168 +1,454 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Qubx - Geometric Puzzle Game</title>
-  <meta name="description" content="Qubx - A fast-reaction 3D puzzle game with neon aesthetics. Play the classic version free or try the new Steam release!">
-  
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
-  
-  <!-- Styles -->
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div class="bg-wrapper">
-    <div class="grid-bg"></div>
-    <div class="glow-orb glow-orb-1" id="orb1"></div>
-    <div class="glow-orb glow-orb-2" id="orb2"></div>
-    
-    <div class="container">
-      <nav class="site-nav">
-        <a href="index.html" class="nav-link nav-active">qubx</a>
-        <span class="nav-sep">/</span>
-        <a href="skunkworks.html" class="nav-link">skunkworks</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Iconic Games</title>
+    <meta
+      name="description"
+      content="Qubx 2 is a 3D shape matching game from Iconic Games. Watch the trailer, explore Run mode and Quick Play, and try the free Steam demo."
+    />
+    <meta name="theme-color" content="#080c10" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <link rel="canonical" href="https://iconicgames.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Iconic Games" />
+    <meta property="og:title" content="Iconic Games" />
+    <meta
+      property="og:description"
+      content="Rotate the cube to match incoming shapes. Qubx 2 is out now in Early Access, with a free demo on Steam."
+    />
+    <meta property="og:url" content="https://iconicgames.com/" />
+    <meta
+      property="og:image"
+      content="https://iconicgames.com/assets/qubx-2-social.jpg"
+    />
+    <meta
+      property="og:image:alt"
+      content="Qubx 2: a neon cube with geometric shapes on its faces"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="site.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a
+          class="studio-brand"
+          href="index.html"
+          aria-label="Iconic Games home"
+        >
+          <span class="studio-logo"
+            ><img
+              src="assets/iconic-games-logo.png"
+              alt="Iconic Games"
+              width="64"
+              height="64"
+          /></span>
+        </a>
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="#qubx-2" aria-current="page">Qubx 2</a
+          ><a href="#more-games">More games</a><a href="#studio">The studio</a>
+        </nav>
+        <a
+          class="header-cta"
+          href="https://store.steampowered.com/app/3856500/Qubx_2/"
+          >Get Qubx 2 <span aria-hidden="true">↗</span></a
+        >
+      </div>
+    </header>
+    <main id="main">
+      <section class="hero" id="qubx-2" aria-labelledby="hero-title">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="shell hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">
+              <span class="status-light" aria-hidden="true"></span> Qubx 2
+              <span class="eyebrow-divider">/</span> Out now in Early Access
+            </p>
+            <h1 id="hero-title">
+              Match the shape.<br /><span>Hold the line.</span>
+            </h1>
+            <p class="hero-description">
+              Rotate the cube to match incoming shapes. Build your combo as the
+              speed climbs.
+            </p>
+            <div class="hero-actions">
+              <a
+                class="button button-primary"
+                href="https://store.steampowered.com/app/3856500/Qubx_2/"
+                >Get on Steam <span aria-hidden="true">↗</span></a
+              >
+              <a
+                class="button button-secondary"
+                href="https://store.steampowered.com/app/3856500/Qubx_2/#demoGameBtn"
+                >Try the free demo <span aria-hidden="true">↗</span></a
+              >
+            </div>
+            <div class="hero-meta">
+              <p>Windows · macOS · Linux · Steam Deck</p>
+              <a href="https://iconicgame.itch.io/qubx-2"
+                >Also on itch.io <span aria-hidden="true">↗</span></a
+              >
+            </div>
+          </div>
+          <div class="hero-art">
+            <img
+              class="qubx-logo"
+              src="assets/qubx-2-logo.png"
+              alt="Qubx 2"
+              width="1024"
+              height="1024"
+              fetchpriority="high"
+            />
+            <a class="watch-link" href="#trailer"
+              ><span class="small-play" aria-hidden="true">▶</span> Watch the
+              trailer <span aria-hidden="true">↓</span></a
+            >
+          </div>
+        </div>
+        <div class="shell hero-divider" aria-hidden="true">
+          <div class="shape-sequence" aria-hidden="true">
+            <i class="shape-triangle"></i><i class="shape-circle"></i
+            ><i class="shape-square"></i><i class="shape-diamond"></i
+            ><i class="shape-cross"></i>
+          </div>
+        </div>
+      </section>
+      <section
+        class="section shell"
+        id="trailer"
+        aria-labelledby="trailer-title"
+      >
+        <div class="section-heading">
+          <div>
+            <h2 id="trailer-title">Watch the trailer</h2>
+          </div>
+          <a
+            class="text-link"
+            href="https://www.youtube.com/watch?v=He80x8rVXrY"
+            >Watch on YouTube <span aria-hidden="true">↗</span></a
+          >
+        </div>
+        <div class="trailer-frame" data-trailer>
+          <a
+            class="trailer-cover"
+            href="https://www.youtube.com/watch?v=He80x8rVXrY"
+            aria-label="Play the Qubx 2 trailer"
+            data-trailer-play
+          >
+            <img
+              src="assets/trailer-poster.webp"
+              alt=""
+              width="1280"
+              height="720"
+              loading="lazy"
+            />
+            <span class="play-button" aria-hidden="true"
+              ><svg viewBox="0 0 24 24" width="24" height="24">
+                <path d="m8 4 12 8-12 8Z" fill="currentColor" /></svg
+            ></span>
+          </a>
+        </div>
+      </section>
+      <section
+        class="section gameplay-section"
+        aria-labelledby="gameplay-title"
+      >
+        <div class="shell">
+          <div class="section-heading">
+            <div>
+              <h2 id="gameplay-title">Inside Qubx 2</h2>
+            </div>
+          </div>
+          <div class="feature-grid">
+            <article class="feature">
+              <span class="feature-number"
+                >01 <span aria-hidden="true">↗</span></span
+              >
+              <h3>Run mode</h3>
+              <p>
+                Work through escalating chapters. Spend Qubits in the shop on
+                powerups and extra lives.
+              </p>
+            </article>
+            <article class="feature">
+              <span class="feature-number"
+                >02 <span aria-hidden="true">↗</span></span
+              >
+              <h3>Quick Play</h3>
+              <p>
+                An endless stream of shapes at increasing speed. Keep a combo
+                going and beat your high score.
+              </p>
+            </article>
+            <article class="feature">
+              <span class="feature-number"
+                >03 <span aria-hidden="true">↗</span></span
+              >
+              <h3>Special modes</h3>
+              <p>Adapt to changing rules as you progress through a run.</p>
+            </article>
+          </div>
+          <div class="screenshots" role="group" aria-label="Qubx 2 screenshots">
+            <figure>
+              <a
+                href="assets/screenshots/shape-matching.webp"
+                aria-label="View the shape matching screenshot at full size"
+                ><img
+                  src="assets/screenshots/shape-matching.webp"
+                  alt="A star approaches the cube as a combo builds during a run."
+                  width="1600"
+                  height="1005"
+                  loading="lazy"
+              /></a>
+              <figcaption>
+                <span>Shape matching</span><span aria-hidden="true">01 ↗</span>
+              </figcaption>
+            </figure>
+            <figure>
+              <a
+                href="assets/screenshots/qubit-shop.webp"
+                aria-label="View the Qubit Shop screenshot at full size"
+                ><img
+                  src="assets/screenshots/qubit-shop.webp"
+                  alt="The Qubit Shop offers powerups and an extra life between chapters."
+                  width="1600"
+                  height="1005"
+                  loading="lazy"
+              /></a>
+              <figcaption>
+                <span>The Qubit Shop</span><span aria-hidden="true">02 ↗</span>
+              </figcaption>
+            </figure>
+            <figure>
+              <a
+                href="assets/screenshots/first-contact.webp"
+                aria-label="View the First Contact screenshot at full size"
+                ><img
+                  src="assets/screenshots/first-contact.webp"
+                  alt="A pixel art radar screen introduces the First Contact chapter."
+                  width="1600"
+                  height="1005"
+                  loading="lazy"
+              /></a>
+              <figcaption>
+                <span>First Contact</span><span aria-hidden="true">03 ↗</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+      <section
+        class="section shell details-section"
+        aria-labelledby="details-title"
+      >
+        <div class="details-intro">
+          <h2 id="details-title">Get Qubx 2</h2>
+          <p>Available in Early Access, with a free demo on Steam.</p>
+          <a
+            class="button button-primary"
+            href="https://store.steampowered.com/app/3856500/Qubx_2/"
+            >Get on Steam <span aria-hidden="true">↗</span></a
+          >
+          <p class="price-note">US$2.99 on Steam. Regional pricing may vary.</p>
+        </div>
+        <div class="game-details">
+          <details open>
+            <summary>Where can I play?</summary>
+            <div class="details-body">
+              <p>
+                Play on Windows, macOS, Linux, or Steam Deck through Steam, with
+                full controller support. See the store for system requirements.
+              </p>
+              <p>
+                <a href="https://iconicgame.itch.io/qubx-2"
+                  >Find Qubx 2 on itch.io</a
+                >
+                for Windows and Linux.
+              </p>
+            </div>
+          </details>
+          <details>
+            <summary>What is next for Early Access?</summary>
+            <div class="details-body">
+              <p>
+                We are tuning difficulty, the run economy, and game feel with
+                player feedback. There is no fixed date for leaving Early
+                Access.
+              </p>
+              <p>
+                <a href="https://store.steampowered.com/news/app/3856500"
+                  >Read the latest updates <span aria-hidden="true">↗</span></a
+                >
+              </p>
+            </div>
+          </details>
+          <details>
+            <summary>Can I adjust the experience?</summary>
+            <div class="details-body">
+              <p>
+                Choose your difficulty, remap controls, and adjust visual
+                effects with reduced motion, reduced flashes, and high contrast
+                shapes.
+              </p>
+              <p>
+                The interface supports English, French, German, Spanish,
+                Japanese, Simplified Chinese, and Welsh.
+              </p>
+            </div>
+          </details>
+          <details>
+            <summary>Can I stream the game and its music?</summary>
+            <div class="details-body">
+              <p>
+                Yes. You can stream, record, and monetize content featuring Qubx
+                2 and its soundtrack. Our music has no royalty obligations or
+                DMCA claims.
+              </p>
+              <p>
+                The Qubx 2 soundtrack is by the Qubx2 Dev Team. Generative AI
+                tools were used in parts of its creation, as disclosed on Steam.
+              </p>
+              <p>
+                <a href="#press"
+                  >Get the press assets <span aria-hidden="true">↓</span></a
+                >
+              </p>
+            </div>
+          </details>
+        </div>
+      </section>
+      <section
+        class="section more-section"
+        id="more-games"
+        aria-labelledby="more-title"
+      >
+        <div class="shell">
+          <div class="section-heading">
+            <div>
+              <h2 id="more-title">More games</h2>
+            </div>
+          </div>
+          <div class="more-grid">
+            <article class="classic-project">
+              <div class="project-topline">
+                <span class="project-tag">Free download</span>
+              </div>
+              <div class="classic-heading">
+                <img
+                  src="qubx.png"
+                  alt=""
+                  width="70"
+                  height="70"
+                  loading="lazy"
+                />
+                <h3>Qubx Classic</h3>
+              </div>
+              <p>
+                The original Qubx, with a three-track soundtrack by DrGonzo_404.
+              </p>
+              <div class="project-links">
+                <a
+                  class="text-link"
+                  href="https://github.com/IconicGamesQubx/IconicGamesQubx.github.io/releases/download/qubx-classic-v1/QubxFull.zip"
+                  >Download Classic <span class="link-meta">ZIP · 10 MB</span
+                  ><span aria-hidden="true">↓</span></a
+                ><a
+                  class="text-link"
+                  href="https://github.com/IconicGamesQubx/IconicGamesQubx.github.io/releases/download/qubx-classic-v1/QubxOST.zip"
+                  >Get the soundtrack <span class="link-meta">ZIP · 8 MB</span
+                  ><span aria-hidden="true">↓</span></a
+                >
+              </div>
+            </article>
+            <article class="skunkworks-project">
+              <div class="project-topline">
+                <span class="project-tag">Prototypes</span>
+              </div>
+              <h3>
+                Skunkworks<span class="skunkworks-asterisk" aria-hidden="true"
+                  >✳</span
+                >
+              </h3>
+              <p>
+                Playable prototypes and development notes from our experiments
+                in stealth and strategy.
+              </p>
+              <div class="prototype-list">
+                <span>Rock Dwellers</span><span>Blob</span
+                ><span>Psychogorilla</span>
+              </div>
+              <a class="text-link" href="skunkworks.html"
+                >Explore the prototypes <span aria-hidden="true">↗</span></a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+      <section
+        class="section shell studio-section"
+        id="studio"
+        aria-labelledby="studio-title"
+      >
+        <div class="studio-heading">
+          <span class="studio-logo"
+            ><img
+              src="assets/iconic-games-logo.png"
+              alt="Iconic Games"
+              width="112"
+              height="112"
+              loading="lazy"
+          /></span>
+        </div>
+        <div class="studio-copy">
+          <h2 id="studio-title">Independent games since 2002.</h2>
+          <p>Creators of Blob, Qubx, Tic Tank Toe, and now Qubx 2.</p>
+          <a
+            class="text-link"
+            href="https://store.steampowered.com/developer/IconicGames"
+            >Follow Iconic Games on Steam <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </section>
+      <section class="shell contact-grid" aria-label="Community and press">
+        <div class="contact-block">
+          <h2>Community &amp; support</h2>
+          <p>Ask a question, report a bug, or share feedback on Steam.</p>
+          <a
+            class="text-link"
+            href="https://steamcommunity.com/app/3856500/discussions/"
+            >Join the Steam discussions <span aria-hidden="true">↗</span></a
+          ><a
+            class="text-link"
+            href="https://store.steampowered.com/news/app/3856500"
+            >News and updates <span aria-hidden="true">↗</span></a
+          >
+        </div>
+        <div class="contact-block" id="press">
+          <h2>Press &amp; creators</h2>
+          <p>Logos, capsule art, screenshots, and a fact sheet.</p>
+          <a class="text-link" href="downloads/qubx-2-press-kit.zip" download
+            >Download the press kit <span class="link-meta">ZIP</span
+            ><span aria-hidden="true">↓</span></a
+          ><a class="text-link" href="https://www.youtube.com/@IconicGamesTeam"
+            >Iconic Games on YouTube <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer shell">
+      <p>© 2026 Iconic Games</p>
+      <nav aria-label="Footer navigation">
+        <a href="https://store.steampowered.com/developer/IconicGames">Steam</a
+        ><a href="https://iconicgame.itch.io/qubx-2">itch.io</a
+        ><a href="skunkworks.html">Skunkworks</a
+        ><a href="#qubx-2">Back to top <span aria-hidden="true">↑</span></a>
       </nav>
-
-      <header>
-        <div class="title-wrapper">
-          <h1>QUBX</h1>
-          <div class="scanlines"></div>
-        </div>
-        <p class="subtitle">GEOMETRIC PUZZLE • NEON AESTHETICS • PURE REFLEX</p>
-      </header>
-
-      <div class="cards-grid">
-        <!-- Qubx 2 Card -->
-        <div class="card card-new">
-          <div class="card-glow"></div>
-          <div class="card-content">
-            <div class="card-header">
-              <div class="status-dot"></div>
-              <h2 class="card-title">QUBX 2</h2>
-              <span class="badge-new">NEW</span>
-            </div>
-            
-            <p class="card-description">
-              The evolution. Neon-soaked vaporwave aesthetics meet explosive particle effects 
-              in this high-intensity remake with global leaderboards.
-            </p>
-            
-            <div class="tags">
-              <span class="tag">STEAM EXCLUSIVE</span>
-              <span class="tag">STEAM DECK</span>
-              <span class="tag">CYBERPUNK</span>
-            </div>
-            
-            <div class="features-list">
-              <p>• Intense vaporwave visual overhaul</p>
-              <p>• Competitive global leaderboards</p>
-              <p>• Outstanding new soundtracks</p>
-              <p>• Next-gen combo system & progression</p>
-              <p>• Incredible new gameplay modes</p>
-              <p>• Countless shapes to match</p>
-            </div>
-            
-            <div class="buttons buttons-steam">
-              <a href="https://store.steampowered.com/app/3856500/Qubx_2/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">↗ GET ON STEAM</a>
-              <a href="https://store.steampowered.com/app/3856500/Qubx_2/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">► PLAY DEMO ON STEAM</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Classic Card -->
-        <div class="card card-classic">
-          <div class="card-glow"></div>
-          <div class="card-content">
-            <div class="card-header">
-              <div class="status-dot"></div>
-              <h2 class="card-title">CLASSIC</h2>
-            </div>
-            
-            <p class="card-description">
-              The original experience. A 3D shape-matching game with intuitive controls 
-              and addictive gameplay that started it all.
-            </p>
-            
-            <div class="tags">
-              <span class="tag">LEGACY EDITION</span>
-              <span class="tag">RETRO VIBES</span>
-              <span class="tag">FREE FOREVER</span>
-            </div>
-            
-            <div class="features-list">
-              <p>• Three dimensional shape matching</p>
-              <p>• Original 3-track soundtrack by DrGonzo_404</p>
-              <p>• Classic gameplay mechanics</p>
-            </div>
-            
-            <div class="buttons">
-              <a href="https://github.com/IconicGamesQubx/IconicGamesQubx.github.io/releases/download/qubx-classic-v1/QubxFull.zip" class="btn btn-primary">↓ DOWNLOAD GAME</a>
-              <a href="https://github.com/IconicGamesQubx/IconicGamesQubx.github.io/releases/download/qubx-classic-v1/QubxOST.zip" class="btn btn-secondary">♪ DOWNLOAD OST</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Features Section -->
-      <div class="features">
-        <h3 class="features-title">THE QUBX EXPERIENCE</h3>
-        
-        <div class="features-grid">
-          <div class="feature-1">
-            <div class="feature-icon">🎯</div>
-            <h4 class="feature-title">PRECISION GAMEPLAY</h4>
-            <p class="feature-description">
-              Rotate a 3D cube to match incoming shapes with split-second timing
-            </p>
-          </div>
-          
-          <div class="feature-2">
-            <div class="feature-icon">⚡</div>
-            <h4 class="feature-title">COMBO MULTIPLIERS</h4>
-            <p class="feature-description">
-              Chain successful matches to build massive score multipliers
-            </p>
-          </div>
-          
-          <div class="feature-3">
-            <div class="feature-icon">🎵</div>
-            <h4 class="feature-title">PULSE-POUNDING MUSIC</h4>
-            <p class="feature-description">
-              Original neofunk soundtrack synced to gameplay intensity
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <footer>
-        <p>
-          Created by Iconic Games •
-          <a href="https://iconicgames.com">iconicgames.com</a> •
-          <a href="https://store.steampowered.com/developer/IconicGames" target="_blank" rel="noopener noreferrer">More games on Steam</a>
-        </p>
-      </footer>
-    </div>
-  </div>
-
-  <script>
-    // Mouse-following glow orbs
-    const orb1 = document.getElementById('orb1');
-    const orb2 = document.getElementById('orb2');
-    
-    document.addEventListener('mousemove', (e) => {
-      const x = (e.clientX / window.innerWidth) * 100;
-      const y = (e.clientY / window.innerHeight) * 100;
-      
-      orb1.style.left = x + '%';
-      orb1.style.top = y + '%';
-      
-      orb2.style.left = (100 - x) + '%';
-      orb2.style.top = (100 - y) + '%';
-    });
-  </script>
-</body>
+    </footer>
+  </body>
 </html>
