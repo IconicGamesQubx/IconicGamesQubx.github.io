@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Iconic Games: Skunkworks</title>
-  <meta name="description" content="Project Skunkworks: experimental prototypes from Iconic Games. Rough, early, and in motion.">
+  <meta name="description" content="Project Skunkworks: experimental prototypes from Iconic Games. Playable builds and development notes.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +13,7 @@
   <link rel="icon" href="assets/favicon.png" type="image/png">
   <meta name="theme-color" content="#061428">
 </head>
-<body>
+<body class="skunkworks-directory">
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="container">
     <nav class="sw-nav" aria-label="Main navigation">
@@ -31,139 +31,68 @@
         <div class="subtitle">ICONIC GAMES &middot; EXPERIMENTS</div>
       </div>
       <div class="meta">
-        SHEET 01/01<br>
-        REV: 2026-05<br>
-        SCALE: 1:1
+        PROJECT INDEX<br>
+        PLAYABLE BUILDS<br>
+        FIELD NOTES
       </div>
     </div>
 
     <p class="intro">
-      Small playable experiments, shared while they are still taking shape.
+      Small playable experiments from Iconic Games.
       Download a build or follow its development notes. <span class="handwritten">nothing here is finished.</span>
     </p>
 
-    <!-- Rock Dwellers: project view -->
-    <article class="project" id="rd-project" data-dwg="001">
-      <div class="stamp">PROTOTYPE</div>
-
-      <header class="project-header">
-        <div>
-          <h2 class="project-title">ROCK DWELLERS</h2>
-          <div class="project-subtitle">working title</div>
-        </div>
-        <div class="status-tag">v0.5 · WINDOWS</div>
-      </header>
-
-      <p class="blurb">
-        Top-down stealth-survival. You run a tiny mining colony in hostile space.
-        Dispatch ships between asteroids to grow the operation, but bigger swarms are
-        easier to spot. The core tension: grow vs. hide.
-      </p>
-
-      <table class="spec-table">
-        <tr><td>GENRE</td><td>Stealth-survival, top-down, real-time</td></tr>
-        <tr><td>PLATFORM</td><td>Windows x64, self-contained</td></tr>
-        <tr><td>ENGINE</td><td>Godot</td></tr>
-        <tr><td>STATUS</td><td>Prototype v0.5: rich zones and fleet dispatch</td></tr>
-      </table>
-
-      <div class="annotations">
-        <p>detection = instant game over (for now)</p>
-        <p>asteroids spawn in connected clusters; slots fill, extras queue</p>
-        <p>loaded ships fly slower: loaded = visible longer</p>
-        <p>rich zones draw miners and hostiles alike</p>
+    <section class="experiment-section" aria-labelledby="active-title">
+      <div class="directory-heading">
+        <div><span class="directory-label">PROTOTYPE COLLECTION</span><h2 id="active-title">Playable experiments</h2></div>
+        <span class="directory-count">02 PROJECTS</span>
       </div>
-
-      <div class="btn-row">
-        <a href="https://github.com/IconicGamesQubx/IconicGamesQubx.github.io/releases/download/rockdweller-prototype-v0.5/rockdweller.exe.7z" class="btn btn-primary">↓ DOWNLOAD BUILD</a>
-        <a href="skunkworks-rock-dwellers-devlog.html" class="btn">VIEW DEVLOG →</a>
+      <div class="experiment-grid">
+        <article class="experiment-card" id="rd-project">
+          <div class="card-topline"><span>DWG-001</span></div>
+          <h3><a href="skunkworks-rock-dwellers.html">Rock Dwellers</a></h3>
+          <p class="card-genre">Stealth · Survival</p>
+          <p class="card-pitch">Grow a mining colony in hostile space. Every ship expands your reach — and makes you easier to spot.</p>
+          <p class="card-build">v0.5 · Windows x64 · Free download</p>
+          <div class="card-actions">
+            <a class="btn btn-primary" href="skunkworks-rock-dwellers.html">VIEW PROJECT →</a>
+            <a class="card-download" href="https://github.com/IconicGamesQubx/IconicGamesQubx.github.io/releases/download/rockdweller-prototype-v0.5/rockdweller.exe.7z">Download ↓</a>
+          </div>
+        </article>
+        <article class="experiment-card" id="blob-project">
+          <div class="card-topline"><span>DWG-003</span></div>
+          <h3><a href="skunkworks-blob.html">Blob</a></h3>
+          <p class="card-genre">Strategy · Turn-based</p>
+          <p class="card-pitch">Grow your blobs across a hex board and set off cascading takeovers. Play against a friend or the computer.</p>
+          <p class="card-build">v0.1 · Windows x64 · Free download</p>
+          <div class="card-actions">
+            <a class="btn btn-primary" href="skunkworks-blob.html">VIEW PROJECT →</a>
+            <a class="card-download" href="https://github.com/IconicGamesQubx/IconicGamesQubx.github.io/releases/download/blob-prototype-v0.1/Blob.7z">Download ↓</a>
+          </div>
+        </article>
       </div>
-    </article>
+    </section>
 
-    <!-- Psychogorilla: project view -->
-    <article class="project" id="pg-project" data-dwg="002">
-      <div class="stamp">PROTOTYPE</div>
-      <div class="stamp-cancelled">CANCELLED</div>
-
-      <header class="project-header">
-        <div>
-          <h2 class="project-title">PSYCHOGORILLA</h2>
-          <div class="project-subtitle">working title</div>
-        </div>
-        <div class="status-tag">v0.1 · WINDOWS</div>
-      </header>
-
-      <p class="blurb">
-        Single-room stealth. You share a prison cell with a gorilla. Finish your chores
-        before the timer runs out, quietly enough that the gorilla doesn't snap.
-        The core tension: get work done vs. don't wake the thing in the corner.
-      </p>
-
-      <div class="postit">
-        <p>gorilla escaped.</p>
-        <p>door still locked from the inside.</p>
-        <p>nobody knows how.</p>
-        <p>development paused. gorilla unavailable for comment.</p>
-        <span class="postit-sig">mgmt</span>
+    <section class="experiment-section archive-section" aria-labelledby="archive-title">
+      <div class="directory-heading">
+        <div><span class="directory-label">FROM THE ARCHIVE</span><h2 id="archive-title">Shelved experiments</h2></div>
+        <span class="directory-count">01 PROJECT</span>
       </div>
-
-      <table class="spec-table">
-        <tr><td>GENRE</td><td>Stealth, single-room, real-time</td></tr>
-        <tr><td>PLATFORM</td><td>Windows x64, self-contained</td></tr>
-        <tr><td>ENGINE</td><td>Godot</td></tr>
-        <tr><td>STATUS</td><td>Cancelled; prototype remains available</td></tr>
-      </table>
-
-      <div class="annotations">
-        <p>movement makes noise. so does work.</p>
-        <p>noisy tasks: 4s. silent tasks: 10s. pick your poison.</p>
-        <p>gorilla state machine: sleeping → pacing → fixated → enraged</p>
-        <p>once enraged, contact = caught</p>
+      <p class="archive-intro">Development has stopped; the builds and notes are still here to explore.</p>
+      <div class="experiment-grid">
+        <article class="experiment-card" id="pg-project">
+          <div class="card-topline"><span>DWG-002</span></div>
+          <h3><a href="skunkworks-psychogorilla.html">Psychogorilla</a></h3>
+          <p class="card-genre">Stealth · Single-room</p>
+          <p class="card-pitch">Finish your chores without waking the gorilla sharing your prison cell. The prototype is still available to play.</p>
+          <p class="card-build">v0.1 · Windows x64 · Free download</p>
+          <div class="card-actions">
+            <a class="btn btn-primary" href="skunkworks-psychogorilla.html">VIEW PROJECT →</a>
+            <a class="card-download" href="https://github.com/IconicGamesQubx/IconicGamesQubx.github.io/releases/download/psychogorilla-prototype-v0.1/Psychogorilla.7z">Download ↓</a>
+          </div>
+        </article>
       </div>
-
-      <div class="btn-row">
-        <a href="https://github.com/IconicGamesQubx/IconicGamesQubx.github.io/releases/download/psychogorilla-prototype-v0.1/Psychogorilla.7z" class="btn btn-primary">↓ DOWNLOAD BUILD</a>
-        <a href="skunkworks-psychogorilla-devlog.html" class="btn">VIEW DEVLOG →</a>
-      </div>
-    </article>
-
-    <!-- Blob: project view -->
-    <article class="project" id="blob-project" data-dwg="003">
-      <div class="stamp">PROTOTYPE</div>
-
-      <header class="project-header">
-        <div>
-          <h2 class="project-title">BLOB</h2>
-          <div class="project-subtitle">working title</div>
-        </div>
-        <div class="status-tag">v0.1 · WINDOWS</div>
-      </header>
-
-      <p class="blurb">
-        Two-player chain-reaction on a hex board. Tap a tile to grow your blob;
-        push it past max stage and it cascades into the neighbours. Whoever owns
-        the last blob standing wins. Play against another person or the computer.
-      </p>
-
-      <table class="spec-table">
-        <tr><td>GENRE</td><td>Tactical chain-reaction, hex-grid, turn-based</td></tr>
-        <tr><td>PLATFORM</td><td>Windows x64, self-contained</td></tr>
-        <tr><td>ENGINE</td><td>Godot</td></tr>
-        <tr><td>STATUS</td><td>Playable prototype</td></tr>
-      </table>
-
-      <div class="annotations">
-        <p>tap a tile to grow. max stage = cascade into neighbours.</p>
-        <p>two seats: human + human, or human + AI (pluggable).</p>
-        <p>per-blob seeded wobble / ripple: no two look identical.</p>
-        <p>right-drag = orbit, scroll = zoom. wood-grain board.</p>
-      </div>
-
-      <div class="btn-row">
-        <a href="https://github.com/IconicGamesQubx/IconicGamesQubx.github.io/releases/download/blob-prototype-v0.1/Blob.7z" class="btn btn-primary">↓ DOWNLOAD BUILD</a>
-        <a href="skunkworks-blob-devlog.html" class="btn">VIEW DEVLOG →</a>
-      </div>
-    </article>
+    </section>
 
     </main>
     <footer class="footer"><a href="index.html">ICONIC GAMES</a> &middot; EXPERIMENTAL BUILDS</footer>
